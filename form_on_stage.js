@@ -1,7 +1,7 @@
 Feature("form");
 
 Scenario("test form", async ({ I }) => {
-  const url = "https://ru.henleyglobal.com/contact-download/";
+  const url = "http://rudev.web.henley.ch/contact-download/";
   I.amOnPage(url);
 
   const allUrls = await I.grabAttributeFromAll(".col-sm-6 > a", "href");

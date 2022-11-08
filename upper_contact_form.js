@@ -2,6 +2,8 @@ Feature("form");
 
 Scenario("test contact form", ({ I }) => {
   const url = "https://www.henleyglobal.com/ru/contact";
+
+  //const url = "https://ru.henleyglobal.com/contact";
   const title = "contact";
   const numID = String(Math.floor(Math.random() * 1000000));
 
@@ -25,7 +27,7 @@ Scenario("test contact form", ({ I }) => {
   I.click("#ui-id-20");
   I.checkOption("Та же, что и гражданство");
 
-  I.fillField("E-mail*", "sol.testing.henley@gmail.com");
+  I.fillField("E-mail*", `${numID}sol.testing.henley@gmail.com`);
   I.fillField("Телефон", numID);
 
   I.click("#lead_source_code-button");

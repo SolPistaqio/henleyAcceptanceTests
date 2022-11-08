@@ -2,6 +2,7 @@ Feature("form");
 
 Scenario("test call form", ({ I }) => {
   const url = "https://www.henleyglobal.com/ru/";
+  // const url = "https://ru.henleyglobal.com";
   I.amOnPage(url);
   I.click("Принимаю");
 
@@ -23,7 +24,7 @@ Scenario("test call form", ({ I }) => {
   I.click("#user_interest-button");
   I.click("#ui-id-290");
 
-  I.fillField("E-mail", "sol.testing.henley@gmail.com");
+  I.fillField("E-mail", `${numID}sol.testing.henley@gmail.com`);
   I.fillField("Телефон", numID);
 
   I.click("#cbf_lead_source_code-button");
@@ -33,6 +34,8 @@ Scenario("test call form", ({ I }) => {
     )
   );
   I.checkOption("Да");
+
   I.click("Отправить");
-  I.see("Спасибо, ваша заявка была отправлена.");
+  pause();
+  I.see("Спасибо");
 });

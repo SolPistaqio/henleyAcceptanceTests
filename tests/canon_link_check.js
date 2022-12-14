@@ -1,0 +1,202 @@
+Feature("form");
+
+urls = [
+  "http://hgond.web.henley.ch/ru/citizenship-antigua",
+  "http://hgond.web.henley.ch/ru/citizenship-antigua/",
+  "http://hgond.web.henley.ch/ru/citizenship-austria",
+  "http://hgond.web.henley.ch/ru/citizenship-austria/",
+  "http://hgond.web.henley.ch/ru/citizenship-dominica",
+  "http://hgond.web.henley.ch/ru/citizenship-dominica/",
+  "http://hgond.web.henley.ch/ru/citizenship-grenada",
+  "http://hgond.web.henley.ch/ru/citizenship-grenada/",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/dual-citizenship-benefits/",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/dual-citizenship/",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/important-points/",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/planning/",
+  "http://hgond.web.henley.ch/ru/citizenship-jordan",
+  "http://hgond.web.henley.ch/ru/citizenship-jordan/",
+  "http://hgond.web.henley.ch/ru/citizenship-malta",
+  "http://hgond.web.henley.ch/ru/citizenship-malta/",
+  "http://hgond.web.henley.ch/ru/citizenship-montenegro",
+  "http://hgond.web.henley.ch/ru/citizenship-montenegro/",
+  "http://hgond.web.henley.ch/ru/citizenship-north-macedonia",
+  "http://hgond.web.henley.ch/ru/citizenship-north-macedonia/",
+  "http://hgond.web.henley.ch/ru/citizenship-skn",
+  "http://hgond.web.henley.ch/ru/citizenship-skn/",
+  "http://hgond.web.henley.ch/ru/citizenship-stlucia",
+  "http://hgond.web.henley.ch/ru/citizenship-stlucia/",
+  "http://hgond.web.henley.ch/ru/citizenship-turkey",
+  "http://hgond.web.henley.ch/ru/citizenship-turkey/",
+];
+
+urls1 = [
+  "http://hgond.web.henley.ch/ru/residence-australia",
+  "http://hgond.web.henley.ch/ru/residence-australia/",
+  "http://hgond.web.henley.ch/ru/residence-austria",
+  "http://hgond.web.henley.ch/ru/residence-austria/",
+  "http://hgond.web.henley.ch/ru/residence-canada",
+  "http://hgond.web.henley.ch/ru/residence-canada/",
+  "http://hgond.web.henley.ch/ru/residence-cyprus",
+  "http://hgond.web.henley.ch/ru/residence-cyprus/",
+  "http://hgond.web.henley.ch/ru/residence-greece",
+  "http://hgond.web.henley.ch/ru/residence-greece/",
+  "http://hgond.web.henley.ch/ru/residence-hong-kong",
+  "http://hgond.web.henley.ch/ru/residence-hong-kong/",
+  // "http://hgond.web.henley.ch/ru/residence-investment",
+  // "http://hgond.web.henley.ch/ru/residence-investment/",
+  // "http://hgond.web.henley.ch/ru/residence-investment/important-points/",
+  // "http://hgond.web.henley.ch/ru/residence-investment/planning/",
+  // "http://hgond.web.henley.ch/ru/residence-investment/real-estate/",
+  "http://hgond.web.henley.ch/ru/residence-italy",
+  "http://hgond.web.henley.ch/ru/residence-italy/",
+  "http://hgond.web.henley.ch/ru/residence-jersey",
+  "http://hgond.web.henley.ch/ru/residence-jersey/",
+  "http://hgond.web.henley.ch/ru/residence-latvia",
+  "http://hgond.web.henley.ch/ru/residence-latvia/",
+  "http://hgond.web.henley.ch/ru/residence-luxembourg",
+  "http://hgond.web.henley.ch/ru/residence-luxembourg/",
+  "http://hgond.web.henley.ch/ru/residence-malaysia",
+  "http://hgond.web.henley.ch/ru/residence-malaysia/",
+  "http://hgond.web.henley.ch/ru/residence-malta",
+  "http://hgond.web.henley.ch/ru/residence-malta/",
+  "http://hgond.web.henley.ch/ru/residence-mauritius",
+  "http://hgond.web.henley.ch/ru/residence-mauritius/",
+  "http://hgond.web.henley.ch/ru/residence-monaco",
+  "http://hgond.web.henley.ch/ru/residence-monaco/",
+  "http://hgond.web.henley.ch/ru/residence-new-zealand",
+  "http://hgond.web.henley.ch/ru/residence-new-zealand/",
+  "http://hgond.web.henley.ch/ru/residence-panama",
+  "http://hgond.web.henley.ch/ru/residence-panama/",
+  // "http://hgond.web.henley.ch/ru/residence-portugal-golden-visa",
+  // "http://hgond.web.henley.ch/ru/residence-portugal-golden-visa/",
+  "http://hgond.web.henley.ch/ru/residence-singapore",
+  "http://hgond.web.henley.ch/ru/residence-singapore/",
+  "http://hgond.web.henley.ch/ru/residence-spain",
+  "http://hgond.web.henley.ch/ru/residence-spain/",
+  "http://hgond.web.henley.ch/ru/residence-thailand",
+  "http://hgond.web.henley.ch/ru/residence-thailand/",
+  "http://hgond.web.henley.ch/ru/residence-uk",
+  "http://hgond.web.henley.ch/ru/residence-uk/",
+  "http://hgond.web.henley.ch/ru/residence-united-arab-emirates",
+  "http://hgond.web.henley.ch/ru/residence-united-arab-emirates/",
+  "http://hgond.web.henley.ch/ru/residence-usa",
+  "http://hgond.web.henley.ch/ru/residence-usa/",
+  "http://hgond.web.henley.ch/ru/permanent-residence-switzerland/",
+  "http://hgond.web.henley.ch/ru/permanent-residence-switzerland",
+];
+
+cano1 = [
+  "http://hgond.web.henley.ch/ru/residence-investment/australia",
+  "http://hgond.web.henley.ch/ru/residence-investment/australia",
+  "http://hgond.web.henley.ch/ru/residence-investment/austria",
+  "http://hgond.web.henley.ch/ru/residence-investment/austria",
+  "http://hgond.web.henley.ch/ru/residence-investment/canada",
+  "http://hgond.web.henley.ch/ru/residence-investment/canada",
+  "http://hgond.web.henley.ch/ru/residence-investment/cyprus",
+  "http://hgond.web.henley.ch/ru/residence-investment/cyprus",
+  "http://hgond.web.henley.ch/ru/residence-investment/greece",
+  "http://hgond.web.henley.ch/ru/residence-investment/greece",
+  "http://hgond.web.henley.ch/ru/residence-investment/hong-kong",
+  "http://hgond.web.henley.ch/ru/residence-investment/hong-kong",
+  // "http://hgond.web.henley.ch/ru/residence-investment/investment",
+  // "http://hgond.web.henley.ch/ru/residence-investment/investment",
+  // "http://hgond.web.henley.ch/ru/residence-investment/investment/important-points",
+  // "http://hgond.web.henley.ch/ru/residence-investment/investment/planning",
+  // "http://hgond.web.henley.ch/ru/residence-investment/investment/real-estate",
+  "http://hgond.web.henley.ch/ru/residence-investment/italy",
+  "http://hgond.web.henley.ch/ru/residence-investment/italy",
+  "http://hgond.web.henley.ch/ru/residence-investment/jersey",
+  "http://hgond.web.henley.ch/ru/residence-investment/jersey",
+  "http://hgond.web.henley.ch/ru/residence-investment/latvia",
+  "http://hgond.web.henley.ch/ru/residence-investment/latvia",
+  "http://hgond.web.henley.ch/ru/residence-investment/luxembourg",
+  "http://hgond.web.henley.ch/ru/residence-investment/luxembourg",
+  "http://hgond.web.henley.ch/ru/residence-investment/malaysia",
+  "http://hgond.web.henley.ch/ru/residence-investment/malaysia",
+  "http://hgond.web.henley.ch/ru/residence-investment/malta",
+  "http://hgond.web.henley.ch/ru/residence-investment/malta",
+  "http://hgond.web.henley.ch/ru/residence-investment/mauritius",
+  "http://hgond.web.henley.ch/ru/residence-investment/mauritius",
+  "http://hgond.web.henley.ch/ru/residence-investment/monaco",
+  "http://hgond.web.henley.ch/ru/residence-investment/monaco",
+  "http://hgond.web.henley.ch/ru/residence-investment/new-zealand",
+  "http://hgond.web.henley.ch/ru/residence-investment/new-zealand",
+  "http://hgond.web.henley.ch/ru/residence-investment/panama",
+  "http://hgond.web.henley.ch/ru/residence-investment/panama",
+  // "http://hgond.web.henley.ch/ru/residence-investment/portugal-golden-visa",
+  // "http://hgond.web.henley.ch/ru/residence-investment/portugal-golden-visa",
+  "http://hgond.web.henley.ch/ru/residence-investment/singapore",
+  "http://hgond.web.henley.ch/ru/residence-investment/singapore",
+  "http://hgond.web.henley.ch/ru/residence-investment/spain",
+  "http://hgond.web.henley.ch/ru/residence-investment/spain",
+  "http://hgond.web.henley.ch/ru/residence-investment/thailand",
+  "http://hgond.web.henley.ch/ru/residence-investment/thailand",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-kingdom",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-kingdom",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-arab-emirates",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-arab-emirates",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-states",
+  "http://hgond.web.henley.ch/ru/residence-investment/united-states",
+  "http://hgond.web.henley.ch/ru/residence-investment/switzerland",
+  "http://hgond.web.henley.ch/ru/residence-investment/switzerland",
+];
+
+cano = [
+  "http://hgond.web.henley.ch/ru/citizenship-investment/antigua-barbuda",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/antigua-barbuda",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/austria",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/austria",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/dominica",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/dominica",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/grenada",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/grenada",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/dual-citizenship",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/important-points",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/investment/dual-citizenship-benefits/",
+
+  "http://hgond.web.henley.ch/ru/citizenship-investment/jordan",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/jordan",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/malta",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/malta",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/montenegro",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/montenegro",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/north-macedonia",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/north-macedonia",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/planning",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/skn",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/skn",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/st-lucia",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/st-lucia",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/turkey",
+  "http://hgond.web.henley.ch/ru/citizenship-investment/turkey",
+];
+
+Scenario("test canon", async ({ I }) => {
+  for (i = 0; i < urls1.length; i++) {
+    I.amOnPage(urls[i]);
+
+    // this part checks correct redirection
+    I.seeInCurrentUrl("/citizenship-investment");
+    // I.seeInCurrentUrl("/residence-investment");
+
+    // this part checks the canonicals against the list
+    const canonRequired = cano[i];
+
+    const url = await I.grabAttributeFrom(
+      locate("head > link").withAttr({
+        rel: "canonical",
+      }),
+      "href"
+    );
+
+    I.say(`For ${urls[i]} canonical is ${url}`);
+
+    await I.seeElementInDOM(
+      locate("head > link").withAttr({
+        rel: "canonical",
+        href: canonRequired,
+      })
+    );
+  }
+});

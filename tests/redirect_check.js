@@ -1,5 +1,6 @@
 Feature("form");
 
+// urls to check:
 urls = [
   "http://hgond.web.henley.ch/ru/citizenship-antigua",
   "http://hgond.web.henley.ch/ru/citizenship-antigua/",
@@ -30,45 +31,11 @@ urls = [
   "http://hgond.web.henley.ch/ru/citizenship-turkey/",
 ];
 
-urls1 = [
-  "http://hgond.web.henley.ch/ru/country/latvia/residence-latvia",
-  "http://hgond.web.henley.ch/ru/country/latvia/residence-latvia",
-  "http://hgond.web.henley.ch/ru/country/luxembourg/residence-residence",
-  "http://hgond.web.henley.ch/ru/country/luxembourg/residence-residence",
-  "http://hgond.web.henley.ch/ru/country/malaysia/residence-malaysia",
-  "http://hgond.web.henley.ch/ru/country/malaysia/residence-malaysia",
-  "http://hgond.web.henley.ch/ru/country/malta/residence-malta",
-  "http://hgond.web.henley.ch/ru/country/malta/residence-malta",
-  "http://hgond.web.henley.ch/ru/country/mauritius/residence",
-  "http://hgond.web.henley.ch/ru/country/mauritius/residence",
-  "http://hgond.web.henley.ch/ru/country/monaco/residence-monaco",
-  "http://hgond.web.henley.ch/ru/country/monaco/residence-monaco",
-  "http://hgond.web.henley.ch/ru/country/newzealand/residence-new-zealand",
-  "http://hgond.web.henley.ch/ru/country/newzealand/residence-new-zealand",
-  "http://hgond.web.henley.ch/ru/country/panama/residence-panama",
-  "http://hgond.web.henley.ch/ru/country/panama/residence-panama",
-  "http://hgond.web.henley.ch/ru/country/portugal/residence-portugal-golden-residence-program",
-  "http://hgond.web.henley.ch/ru/country/portugal/residence-portugal-golden-residence-program",
-  "http://hgond.web.henley.ch/ru/country/singapore/residence-singapore",
-  "http://hgond.web.henley.ch/ru/country/singapore/residence-singapore",
-  "http://hgond.web.henley.ch/ru/country/spain/residence-spain",
-  "http://hgond.web.henley.ch/ru/country/spain/residence-spain",
-  "http://hgond.web.henley.ch/ru/country/thailand/residence-thailand",
-  "http://hgond.web.henley.ch/ru/country/thailand/residence-thailand",
-  "http://hgond.web.henley.ch/ru/country/united-kingdom/residence-uk",
-  "http://hgond.web.henley.ch/ru/country/united-kingdom/residence-uk",
-  "http://hgond.web.henley.ch/ru/country/united-arab-emirates/residence",
-  "http://hgond.web.henley.ch/ru/country/united-arab-emirates/residence",
-  "http://hgond.web.henley.ch/ru/country/united-states/residence-usa",
-  "http://hgond.web.henley.ch/ru/country/united-states/residence-usa",
-  "http://hgond.web.henley.ch/ru/country/switzerland/residence",
-  "http://hgond.web.henley.ch/ru/country/switzerland/residence",
-];
-
 Scenario("test redirect", async ({ I }) => {
   for (i = 0; i < urls1.length; i++) {
-    I.amOnPage(urls1[i]);
-    // I.seeInCurrentUrl("/citizenship-investment");
-    I.seeInCurrentUrl("/residence-investment");
+    I.amOnPage(urls[i]);
+    const iwantTosee = "/residence-investment";
+
+    I.seeInCurrentUrl(iwantTosee);
   }
 });

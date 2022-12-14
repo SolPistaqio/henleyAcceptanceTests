@@ -11,7 +11,7 @@ Scenario("test form", async ({ I }) => {
     "href"
   );
 
-  for (i = 6; i < allUrls.length; i += 2) {
+  for (i = 0; i < allUrls.length; i += 2) {
     I.amOnPage(allUrls[i]);
     I.click(
       "#section-about-citizenship > div > div > div > div.col-md-12.col-lg-6.blue-col.section-pb.section-pt > a:nth-child(5)"

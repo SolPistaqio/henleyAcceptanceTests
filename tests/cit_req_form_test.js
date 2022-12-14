@@ -9,7 +9,7 @@ Scenario("test form", async ({ I }) => {
     "href"
   );
 
-  for (i = 3; i < allUrls.length; i++) {
+  for (i = 0; i < allUrls.length; i++) {
     I.amOnPage(allUrls[i]);
     I.click(
       "#section-about-citizenship > div > div > div > div.col-md-12.col-lg-6.blue-col.section-pb.section-pt > a.btn.secondary-btn.white-border.mt20.mr20"

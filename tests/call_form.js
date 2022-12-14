@@ -3,6 +3,7 @@ Feature("form");
 Scenario("test call form", ({ I }) => {
   const url = "https://www.henleyglobal.com/ru/";
   // const url = "https://ru.henleyglobal.com";
+  // const url = "http://rudev.web.henley.ch";
   I.amOnPage(url);
   I.click("Принимаю");
 
@@ -25,7 +26,7 @@ Scenario("test call form", ({ I }) => {
   I.click("#ui-id-290");
 
   I.fillField("E-mail", `${numID}sol.testing.henley@gmail.com`);
-  I.fillField("Телефон", numID);
+  I.fillField("Телефон", numID + "" + numID);
 
   I.click("#cbf_lead_source_code-button");
   I.click(
@@ -36,6 +37,6 @@ Scenario("test call form", ({ I }) => {
   I.checkOption("Да");
 
   I.click("Отправить");
-  pause();
+
   I.see("Спасибо");
 });
